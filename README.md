@@ -1,19 +1,21 @@
-# Web Development Project 5 - *Name of App Here*
+# Web Development Project 5 - *Brewery Board*
 
 Submitted by: **Kelvin Zhao**
 
-This web app: **insert description**
+This web app: **Find information about your local breweries by searching and filtering this free database collection of breweries!**
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The list displays a list of data fetched using an API call**
-- [ ] **Data uses the useEffect React hook and async/await syntax**
-- [ ] **The app dashboard includes at least three summary statistics about the data such as**
-    - [ ] *insert details*
+- [x] **The list displays a list of data fetched using an API call**
+- [x] **Data uses the useEffect React hook and async/await syntax**
+- [x] **The app dashboard includes at least three summary statistics about the data such as**
+    - [x] *Name*
+    - [x] *Location*
+    - [x] *Brewery Type*
 - [ ] **A search bar allows the user to search for an item in the fetched data**
 - [ ] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 

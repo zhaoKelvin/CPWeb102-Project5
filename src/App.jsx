@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import { Link } from "react-router-dom";
+import TextResult from "./Components/textResult.jsx";
 
 function App() {
 
@@ -82,19 +84,23 @@ function App() {
       <p>Available Brewery Types: micro, nano, regional, brewpub, large, planning, bar, contract, proprietor, closed</p>
       <ul>
         {searchInput.length > 0
-          ? Object.entries(filteredResults).map(([brewery]) =>
-            <li key={filteredResults[brewery].name}>{`Name: ${filteredResults[brewery].name} 
-                                                      State: ${filteredResults[brewery].state} 
-                                                      Type: ${filteredResults[brewery].brewery_type 
-                                                                ? filteredResults[brewery].brewery_type
-                                                                : "Undefined"}`}</li> )
+          ? (filteredResults
+              ? Object.entries(filteredResults).map(([brewery]) =>
+              <TextResult
+                name={filteredResults[brewery].name}
+                state={filteredResults[brewery].state}
+                type={filteredResults[brewery].brewery_type}
+                id={filteredResults[brewery].id}
+              /> )
+              : null)
           : (list
               ? Object.entries(list).map(([brewery]) =>
-                <li key={list[brewery].name}>{`Name: ${list[brewery].name} 
-                                                State: ${list[brewery].state} 
-                                                Type: ${list[brewery].brewery_type
-                                                          ? list[brewery].brewery_type
-                                                          : "Undefined"}`}</li>)
+              <TextResult
+                name={list[brewery].name}
+                state={list[brewery].state}
+                type={list[brewery].brewery_type}
+                id={list[brewery].id}
+              /> )
               : null)
         }
       </ul>
